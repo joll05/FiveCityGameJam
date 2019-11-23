@@ -9,6 +9,7 @@ public class Kill : MonoBehaviour
     void Start()
     {
         //Destroy(this.gameObject, time);
+        transform.rotation = Random.rotation;
     }
     private void OnCollisionEnter(Collision collision)
     {

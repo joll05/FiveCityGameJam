@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8674248402915503953}
   - component: {fileID: 2389078889486327135}
   - component: {fileID: 7264789438604521965}
+  - component: {fileID: 8739378596123154922}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -28,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097666757154265584}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.3271354, y: 0, z: 0, w: 0.9449775}
   m_LocalPosition: {x: -3.7544873, y: -12.637179, z: 5.692452}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3484302992149837882}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 38.19, y: 0, z: 0}
 --- !u!33 &6543804363900128534
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -103,7 +104,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097666757154265584}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -123,7 +124,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6672a4f06044a4dba486027d28c93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 5
+  time: 6.83
+--- !u!114 &8739378596123154922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097666757154265584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f725a8e2e03a47659919967baa1be06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Drag: 0.17
 --- !u!1001 &8439763099958006560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,11 +145,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8427824307617668406}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 8e35e7130537b1e4880858ee988e7e4a,
-        type: 3}
-      propertyPath: m_Name
-      value: Pepparkaka-Gubbe
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8e35e7130537b1e4880858ee988e7e4a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -200,6 +209,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.99999976
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8e35e7130537b1e4880858ee988e7e4a,
+        type: 3}
+      propertyPath: m_Name
+      value: Pepparkaka-Gubbe
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 8e35e7130537b1e4880858ee988e7e4a,
         type: 3}
