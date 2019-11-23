@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Kill : MonoBehaviour
 {
+    public GameObject particle;
     public float time;
+    public AudioSource asrc;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +21,10 @@ public class Kill : MonoBehaviour
         {
             collision.transform.GetComponent<Transformer>().OnHit();
         }
+
+        GameObject obj = Instantiate(particle) as GameObject;
+        obj.transform.position = this.transform.position;
+        Destroy(this.gameObject, 0.03f);
+
     }
 }

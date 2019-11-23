@@ -28,5 +28,6 @@ public class Screen : MonoBehaviour
         cameraScript.inOffice = false;
         mainCamera.transform.position = screenCamera.transform.position;
         mainCamera.transform.rotation = screenCamera.transform.rotation;
+        StartCoroutine(Throw.ToggleThrowing(0.05f, true));
     }
 }
