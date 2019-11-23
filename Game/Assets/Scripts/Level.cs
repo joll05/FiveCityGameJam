@@ -5,7 +5,7 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
     public float lvl;
-    GameObject cameraMain;
+    //GameObject cameraMain;
     public static Camera current;
     CameraScript cameraScript;
 
@@ -14,7 +14,7 @@ public class Level : MonoBehaviour
     {
         cameraScript = Camera.main.gameObject.GetComponent<CameraScript>();
         current = Camera.main;
-        
+
     }
 
     // Update is called once per frame

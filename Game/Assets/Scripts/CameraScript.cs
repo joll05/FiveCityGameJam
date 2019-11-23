@@ -8,6 +8,7 @@ public class CameraScript : MonoBehaviour
     Vector3 startPos;
     Vector3 startRot;
     public float currentLvl;
+    public bool inOffice = true;
 
     public GameObject lvl_1;
     public GameObject lvl_2;
@@ -23,13 +24,18 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(transform.position, new Vector3(0, 1, 0), Input.GetAxis("Mouse X") * sensetivity);
-        transform.RotateAround(transform.position, this.transform.right, Input.GetAxis("Mouse Y") * sensetivity * -1);
+        if (inOffice)
+        {
+            transform.RotateAround(transform.position, new Vector3(0, 1, 0), Input.GetAxis("Mouse X") * sensetivity);
+            transform.RotateAround(transform.position, this.transform.right, Input.GetAxis("Mouse Y") * sensetivity * -1);
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             this.transform.position = startPos;
             this.transform.position = startPos;
+            Cursor.lockState = CursorLockMode.Locked;
+            inOffice = true;
         }
 
         //santa goes to the next room
