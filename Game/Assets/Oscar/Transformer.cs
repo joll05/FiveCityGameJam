@@ -7,20 +7,9 @@ public class Transformer : MonoBehaviour
     public GameObject state1;
     public GameObject state2;
 
-    // Start is called before the first frame update
-    void Start()
+    public void OnHit()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnHit()
-    {
+        print("hit");
         state1.SetActive(false);
         state2.SetActive(true);
     }
