@@ -7,6 +7,12 @@ public class CameraScript : MonoBehaviour
     public float sensetivity;
     Vector3 startPos;
     Vector3 startRot;
+    public float currentLvl;
+
+    public GameObject lvl_1;
+    public GameObject lvl_2;
+    public GameObject lvl_3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +30,24 @@ public class CameraScript : MonoBehaviour
         {
             this.transform.position = startPos;
             this.transform.position = startPos;
+        }
+
+        //santa goes to the next room
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            currentLvl += 1;
+            
+            if (currentLvl == 2)
+            {
+                lvl_1.SetActive(false);
+                lvl_2.SetActive(true);
+            }
+            if (currentLvl == 3)
+            {
+                lvl_2.SetActive(false);
+                lvl_3.SetActive(true);
+            }
+
         }
     }
 }
