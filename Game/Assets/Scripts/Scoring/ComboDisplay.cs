@@ -19,11 +19,11 @@ public class ComboDisplay : MonoBehaviour
 
         if (ScoreManager.IncreasingCombo)
         {
-            text.color = ScoreManager.goodColor;
+            text.color = ScoreManager.instance.goodColor;
         }
         else
         {
-            text.color = ScoreManager.badColor;
+            text.color = ScoreManager.instance.badColor;
         }
     }
 }

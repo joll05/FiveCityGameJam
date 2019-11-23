@@ -13,6 +13,7 @@ public class SantaTrap : MonoBehaviour
         if (other.CompareTag("Santa") && Enabled)
         {
             SantaController.instance.state = SantaState.Trapped;
+            ScoreManager.instance.ComboSpeed = -1f;
             Activated = true;
         }
         else if (other.CompareTag("Projectile"))
@@ -21,6 +22,7 @@ public class SantaTrap : MonoBehaviour
             if (Activated)
             {
                 SantaController.instance.state = SantaState.Moving;
+                ScoreManager.instance.ComboSpeed = 0.5f;
             }
         }
     }

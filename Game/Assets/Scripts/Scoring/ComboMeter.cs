@@ -18,11 +18,11 @@ public class ComboMeter : MonoBehaviour
 
         if (ScoreManager.IncreasingCombo)
         {            
-            fill.color = ScoreManager.goodColor;            
+            fill.color = ScoreManager.instance.goodColor;            
         }
         else
         {
-            fill.color = ScoreManager.badColor;
+            fill.color = ScoreManager.instance.badColor;
         }
     }
 }
