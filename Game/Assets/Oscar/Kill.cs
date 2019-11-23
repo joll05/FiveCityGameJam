@@ -8,6 +8,16 @@ public class Kill : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(this.gameObject, time);
+        //Destroy(this.gameObject, time);
+        transform.rotation = Random.rotation;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        print("hit something");
+
+        if (collision.transform.CompareTag("interactable"))
+        {
+            collision.transform.GetComponent<Transformer>().OnHit();
+        }
     }
 }
