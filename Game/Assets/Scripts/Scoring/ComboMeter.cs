@@ -4,6 +4,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Slider))]
 public class ComboMeter : MonoBehaviour
 {
+    public Graphic fill;
+    
     Slider slider;
 
     void Start()
@@ -13,5 +15,14 @@ public class ComboMeter : MonoBehaviour
     void Update()
     {
         slider.value = ScoreManager.ComboProgression;
+
+        if (ScoreManager.IncreasingCombo)
+        {            
+            fill.color = ScoreManager.instance.goodColor;            
+        }
+        else
+        {
+            fill.color = ScoreManager.instance.badColor;
+        }
     }
 }
