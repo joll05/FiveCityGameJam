@@ -5,6 +5,7 @@ using UnityEngine;
 public class Kill : MonoBehaviour
 {
     public float time;
+    public AudioSource asrc;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +20,7 @@ public class Kill : MonoBehaviour
         {
             collision.transform.GetComponent<Transformer>().OnHit();
         }
+
+        asrc.Play();
     }
 }

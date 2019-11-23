@@ -36,6 +36,7 @@ public class CameraScript : MonoBehaviour
             this.transform.position = startPos;
             Cursor.lockState = CursorLockMode.Locked;
             inOffice = true;
+            StartCoroutine(Throw.ToggleThrowing(0.25f, false));
         }
 
         //santa goes to the next room
