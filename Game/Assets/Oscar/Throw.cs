@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Throw : MonoBehaviour
 {
-    public GameObject go;
+    public List<GameObject> gos;
     public float baseForce;
     public float maxtime = 5.5f;
     public float multiplier = 10;
@@ -23,7 +23,7 @@ public class Throw : MonoBehaviour
     void Start()
     {
         forceSlider.gameObject.SetActive(false);
-        allowThrowing = false;
+        allowThrowing = true;
     }
 
     // Update is called once per frame
@@ -51,7 +51,7 @@ public class Throw : MonoBehaviour
                 Ray r = CameraController.current.ScreenPointToRay(input);
                 Debug.DrawRay(r.origin, r.direction * 100, Color.blue, 12);
                 //print(CameraController.current);
-                GameObject instance = Instantiate(go) as GameObject;
+                GameObject instance = Instantiate(gos[Random.Range(0, gos.Count)]) as GameObject;
                 instance.transform.position = CameraController.current.transform.position;
                 instance.GetComponent<Rigidbody>().AddForce(r.direction * (baseForce + multiplier * timer), ForceMode.Impulse);
                 print(timer);

@@ -69,7 +69,7 @@ public class SantaController : MonoBehaviour
 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, RotationSpeed * SpeedMultiplier);
 
-        if (transform.rotation == targetRotation) state = SantaState.Moving;
+        if (Quaternion.Angle(transform.rotation, targetRotation) < 0.5f) state = SantaState.Moving;
     }
 }
 
