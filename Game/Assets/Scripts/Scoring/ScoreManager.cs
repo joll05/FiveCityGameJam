@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static float Score = 0;
+    public static Color goodColor = Color.white;
+    public static Color badColor = Color.red;
+    
+    public static int Score = 0;
     public static int Combo = 1;
 
     public float ComboSpeed = 1;
+
+    public static bool IncreasingCombo;
 
     public int MaxCombo = 99;
 
@@ -41,5 +46,12 @@ public class ScoreManager : MonoBehaviour
                 ComboProgression = 0;
             }
         }
+
+        IncreasingCombo = ComboSpeed > 0;
+    }
+
+    public static void ChangeScore(int ScoreChange)
+    {
+        Score += ScoreChange;
     }
 }

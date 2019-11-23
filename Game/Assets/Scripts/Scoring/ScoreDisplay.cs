@@ -16,6 +16,15 @@ public class ScoreDisplay : MonoBehaviour
     void Update()
     {
         text.text = string.Format(formatting, ScoreManager.Score);
+
+        if (ScoreManager.IncreasingCombo)
+        {
+            text.color = ScoreManager.goodColor;
+        }
+        else
+        {
+            text.color = ScoreManager.badColor;
+        }
     }
 }
 

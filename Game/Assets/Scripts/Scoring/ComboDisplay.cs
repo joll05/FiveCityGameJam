@@ -16,5 +16,14 @@ public class ComboDisplay : MonoBehaviour
     void Update()
     {
         text.text = string.Format(formatting, ScoreManager.Combo);
+
+        if (ScoreManager.IncreasingCombo)
+        {
+            text.color = ScoreManager.goodColor;
+        }
+        else
+        {
+            text.color = ScoreManager.badColor;
+        }
     }
 }
