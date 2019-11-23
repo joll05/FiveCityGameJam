@@ -20,10 +20,12 @@ public class Screen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void OnMouseDown()
     {
+        cameraScript.startPos = Camera.main.transform.position;
+        cameraScript.startRot = Camera.main.transform.rotation;
         Cursor.lockState = CursorLockMode.None;
         cameraScript.inOffice = false;
         mainCamera.transform.position = screenCamera.transform.position;
