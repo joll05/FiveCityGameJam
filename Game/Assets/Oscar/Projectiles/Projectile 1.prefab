@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3233808284738551787}
   m_Layer: 0
   m_Name: Projectile 1
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,11 +245,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2765518727319085751}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: f8de7aadfa86548e6b63a491318e4f5f,
-        type: 3}
-      propertyPath: m_Name
-      value: Pepparkaka-Julgran
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f8de7aadfa86548e6b63a491318e4f5f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -304,6 +299,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f8de7aadfa86548e6b63a491318e4f5f,
+        type: 3}
+      propertyPath: m_Name
+      value: Pepparkaka-Julgran
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: f8de7aadfa86548e6b63a491318e4f5f,
         type: 3}
