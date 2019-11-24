@@ -27,12 +27,18 @@ public class SantaTrap : MonoBehaviour
         }
         else if (other.CompareTag("Projectile"))
         {
-            Enabled = false;
-            r.material = DisabledMat;
-            if (Activated)
+            if (Enabled)
             {
-                SantaController.instance.state = SantaState.Moving;
-                ScoreManager.instance.ComboSpeed = 0.5f;
+                Enabled = false;
+                r.material = DisabledMat;
+
+                ScoreManager.ChangeScore(100);
+
+                if (Activated)
+                {
+                    SantaController.instance.state = SantaState.Moving;
+                    ScoreManager.instance.ComboSpeed = 0.5f;
+                }
             }
         }
     }
