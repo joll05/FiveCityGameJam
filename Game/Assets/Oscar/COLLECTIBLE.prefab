@@ -46,6 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd216d35015e341288c4c561a15ef8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
+=======
+  Score: 100
+>>>>>>> Stashed changes
   state1: {fileID: 5429402523547854421}
   state2: {fileID: 4239225844624018891}
 --- !u!135 &3391111469120844042

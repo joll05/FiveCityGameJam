@@ -7,6 +7,7 @@ using TMPro;
 using UnityEngine.UI;
 public class Post : MonoBehaviour
 {
+    public TMP_Text scoreText;
     public TMP_InputField t;
     public Image c1;
     public Image c2;
@@ -18,6 +19,11 @@ public class Post : MonoBehaviour
 
     bool state1 = true;
     public Button b1;
+
+    private void Start()
+    {
+        scoreText.text = "Score: " + ScoreContainer.instance.score.ToString();
+    }
 
     public void PostScore()
     {
