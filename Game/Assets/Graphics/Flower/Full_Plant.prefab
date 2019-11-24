@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6876112117349112899}
   - component: {fileID: 499193128502303784}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Dirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1211304261371356, guid: 052bec8a4f25fb244b83565ae21f7501, type: 3}
       propertyPath: m_Name
-      value: PlantPot_01 (1)
+      value: Full_Plant
       objectReference: {fileID: 0}
     - target: {fileID: 4346762320726970, guid: 052bec8a4f25fb244b83565ae21f7501, type: 3}
       propertyPath: m_LocalPosition.x

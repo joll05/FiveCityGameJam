@@ -16,6 +16,7 @@ public class SantaController : MonoBehaviour
     
     public SantaState state;
 
+    public GameObject camera;
     Rigidbody rb;
     Path path;
     int currentPoint = 0;
@@ -71,6 +72,14 @@ public class SantaController : MonoBehaviour
 
         if (Quaternion.Angle(transform.rotation, targetRotation) < 0.5f) state = SantaState.Moving;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Finish")
+        {
+
+        }
+    }
 }
 
 public enum SantaState
@@ -99,5 +108,5 @@ public struct Path
         {
             this.length += Vector3.Distance(points[i], points[i + 1]);
         }
-    }
+    } 
 }
