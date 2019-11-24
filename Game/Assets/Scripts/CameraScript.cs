@@ -32,9 +32,12 @@ public class CameraScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) || currentLvl != back)
         {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.transform.position = startPos;
             this.transform.position = startPos;
 =======
+=======
+>>>>>>> Stashed changes
             if (currentLvl < 4)
             {
                 back = currentLvl;
@@ -44,6 +47,9 @@ public class CameraScript : MonoBehaviour
                 inOffice = true;
                 inOffice = true;
             }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
     }
