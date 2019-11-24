@@ -93,10 +93,14 @@ public class SantaController : MonoBehaviour
                 lvl_1.SetActive(false);
                 lvl_2.SetActive(true);
             }
-            if (Camera.main.GetComponent<CameraScript>().currentLvl == 3)
+            else if (Camera.main.GetComponent<CameraScript>().currentLvl == 3)
             {
                 lvl_2.SetActive(false);
                 lvl_3.SetActive(true);
+            }
+            else if (Camera.main.GetComponent<CameraScript>().currentLvl == 4)
+            {
+                Debug.Log("Finished!");
             }
         }
     }
