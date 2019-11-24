@@ -9,9 +9,14 @@ public class Transformer : MonoBehaviour
     public GameObject state1;
     public GameObject state2;
 
+    bool hit;
+
     public void OnHit()
     {
-        print("hit");
+        if (hit) return;
+
+        hit = true;
+
         state1.SetActive(false);
         state2.SetActive(true);
 
