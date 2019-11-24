@@ -818,6 +818,11 @@ PrefabInstance:
       propertyPath: points
       value: 
       objectReference: {fileID: 1628747785}
+    - target: {fileID: 6267591458987664154, guid: f6773b6bddf7d41af9ee5c4b1de05362,
+        type: 3}
+      propertyPath: SpeedDecrease
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6267591458998847585, guid: f6773b6bddf7d41af9ee5c4b1de05362,
         type: 3}
       propertyPath: ComboSpeed
