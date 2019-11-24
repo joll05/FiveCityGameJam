@@ -13,10 +13,13 @@ public class SantaController : MonoBehaviour
     public float WalkingSpeed = 1f;
     public float RotationSpeed = 1f;
     public float SpeedMultiplier = 1f;
-    
+
+    public GameObject lvl_1;
+    public GameObject lvl_2;
+    public GameObject lvl_3;
+
     public SantaState state;
 
-    public GameObject camera;
     Rigidbody rb;
     Path path;
     int currentPoint = 0;
@@ -73,11 +76,22 @@ public class SantaController : MonoBehaviour
         if (Quaternion.Angle(transform.rotation, targetRotation) < 0.5f) state = SantaState.Moving;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.tag == "Finish")
+        if (collider.gameObject.tag == "Finish")
         {
+            Camera.main.GetComponent<CameraScript>().currentLvl += 1;
 
+            if (Camera.main.GetComponent<CameraScript>().currentLvl == 2)
+            {
+                lvl_1.SetActive(false);
+                lvl_2.SetActive(true);
+            }
+            if (Camera.main.GetComponent<CameraScript>().currentLvl == 3)
+            {
+                lvl_2.SetActive(false);
+                lvl_3.SetActive(true);
+            }
         }
     }
 }
