@@ -13,6 +13,7 @@ public class SantaController : MonoBehaviour
     public float WalkingSpeed = 1f;
     public float RotationSpeed = 1f;
     public float SpeedMultiplier = 1f;
+    public float SpeedDecrease = 1f;
 
     public GameObject lvl_1;
     public GameObject lvl_2;
@@ -47,6 +48,11 @@ public class SantaController : MonoBehaviour
     {
         MoveSanta();
         RotateSanta();
+
+        if(SpeedMultiplier > 1)
+        {
+            SpeedMultiplier -= SpeedDecrease * Time.fixedDeltaTime;
+        }
     }
 
     void MoveSanta()
@@ -92,6 +98,15 @@ public class SantaController : MonoBehaviour
                 lvl_2.SetActive(false);
                 lvl_3.SetActive(true);
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            ScoreManager.ChangeScore(30);
+            SpeedMultiplier += (2 - SpeedMultiplier) * 0.5f;
         }
     }
 }
