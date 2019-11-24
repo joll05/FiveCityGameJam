@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.TextCore;
 using TMPro;
+using System.Linq;
 using UnityEngine.UI;
 public class Post : MonoBehaviour
 {
+    public TMP_Text txt;
     public TMP_InputField t;
     public Image c1;
     public Image c2;
@@ -18,6 +20,11 @@ public class Post : MonoBehaviour
 
     bool state1 = true;
     public Button b1;
+
+    private void Start()
+    {
+        txt.text = "Score: " + ScoreContainer.instance.score;
+    }
 
     public void PostScore()
     {
@@ -62,9 +69,10 @@ public class Post : MonoBehaviour
         c2.gameObject.SetActive(true);
         print(s);
         Response r = JsonUtility.FromJson<Response>("{\"posts\":" + s + "}");
+        List<Scorepost> sorted = r.posts.OrderByDescending(x => int.Parse(x.score)).ToList();
 
         int i = 1;
-        foreach(Scorepost sp in r.posts)
+        foreach(Scorepost sp in sorted)
         {
             GameObject listItem = Instantiate(li, liParent) as GameObject;
             ScoreListItem sli = listItem.GetComponent<ScoreListItem>();
@@ -73,6 +81,8 @@ public class Post : MonoBehaviour
             sli.index = i;
             i++;
         }
+
+
 
     }
 
