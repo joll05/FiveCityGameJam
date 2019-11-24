@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enabled: 1
+  DisabledMat: {fileID: 2100000, guid: ac4158e63bbe6b14b82886535c06a0c5, type: 2}
 --- !u!65 &3055903588698853020
 BoxCollider:
   m_ObjectHideFlags: 0

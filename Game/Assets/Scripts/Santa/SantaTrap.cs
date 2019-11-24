@@ -6,7 +6,16 @@ public class SantaTrap : MonoBehaviour
 {
     public bool Enabled = true;
 
+    public Material DisabledMat;
+
+    Renderer r;
+
     bool Activated = false;
+
+    private void Start()
+    {
+        r = GetComponent<Renderer>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {        
@@ -19,6 +28,7 @@ public class SantaTrap : MonoBehaviour
         else if (other.CompareTag("Projectile"))
         {
             Enabled = false;
+            r.material = DisabledMat;
             if (Activated)
             {
                 SantaController.instance.state = SantaState.Moving;
