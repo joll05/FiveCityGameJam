@@ -5,17 +5,12 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     public float sensetivity;
-<<<<<<< Updated upstream
-    Vector3 startPos;
-    Vector3 startRot;
-=======
     public Vector3 startPos;
     public Quaternion startRot;
     public int currentLvl;
     int back;
     public bool inOffice = true;
 
->>>>>>> Stashed changes
     // Start is called before the first frame update
     void Start()
     {
@@ -31,10 +26,6 @@ public class CameraScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) || currentLvl != back)
         {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            this.transform.position = startPos;
-            this.transform.position = startPos;
 =======
 =======
 >>>>>>> Stashed changes
@@ -47,11 +38,8 @@ public class CameraScript : MonoBehaviour
                 inOffice = true;
                 inOffice = true;
             }
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         }
     }
 }
-
