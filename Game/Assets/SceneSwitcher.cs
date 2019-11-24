@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneSwitcher : MonoBehaviour
 {
-    public SceneSwitcher instance;
+    public static SceneSwitcher instance;
 
     private void Start()
     {

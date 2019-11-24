@@ -100,7 +100,8 @@ public class SantaController : MonoBehaviour
             }
             else if (Camera.main.GetComponent<CameraScript>().currentLvl == 4)
             {
-                Debug.Log("Finished!");
+                ScoreContainer.instance.score = ScoreManager.Score;
+                SceneSwitcher.instance.SwitchScene(3);
             }
         }
     }

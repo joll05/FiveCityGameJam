@@ -7,7 +7,8 @@ public class CameraScript : MonoBehaviour
     public float sensetivity;
     public Vector3 startPos;
     public Quaternion startRot;
-    public float currentLvl;
+    public int currentLvl;
+    public int back;
     public bool inOffice = true;
 
     // Start is called before the first frame update
@@ -28,13 +29,17 @@ public class CameraScript : MonoBehaviour
             transform.RotateAround(transform.position, this.transform.right, Input.GetAxis("Mouse Y") * sensetivity * -1);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || currentLvl != back)
         {
-            this.transform.position = startPos;
-            this.transform.rotation = startRot;
-            Cursor.lockState = CursorLockMode.Locked;
-            inOffice = true;
-            inOffice = true;
+            if(currentLvl < 4) 
+            { 
+                back = currentLvl;
+                this.transform.position = startPos;
+                this.transform.rotation = startRot;
+                Cursor.lockState = CursorLockMode.Locked;
+                inOffice = true;
+                inOffice = true;
+            }
         }
     }
 }
