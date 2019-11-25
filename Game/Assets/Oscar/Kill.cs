@@ -15,16 +15,17 @@ public class Kill : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        print("hit something");
+        //print("hit something");
 
-        if (collision.transform.CompareTag("interactable"))
+        if (collision.transform.CompareTag("interactable")|| collision.transform.CompareTag("Santa"))
         {
             collision.transform.GetComponent<Transformer>().OnHit();
-        }
 
-        GameObject obj = Instantiate(particle) as GameObject;
-        obj.transform.position = this.transform.position;
-        Destroy(this.gameObject, 0.03f);
+            GameObject obj = Instantiate(particle) as GameObject;
+            obj.transform.position = this.transform.position;
+            Destroy(this.gameObject, 0.03f);
+        }
+    
 
     }
 }

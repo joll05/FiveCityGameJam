@@ -19,7 +19,7 @@ public class Transformer : MonoBehaviour
 
         state1.SetActive(false);
         state2.SetActive(true);
-
+        this.GetComponent<Collider>().enabled = false;
         ScoreManager.ChangeScore(Score);
     }
 }
