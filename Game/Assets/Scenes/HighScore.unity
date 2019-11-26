@@ -1068,6 +1068,7 @@ GameObject:
   - component: {fileID: 664661377}
   - component: {fileID: 664661376}
   - component: {fileID: 664661379}
+  - component: {fileID: 664661380}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1159,6 +1160,18 @@ MonoBehaviour:
   li: {fileID: 2570220474038216967, guid: c866a721669a542f4821af3476e1904c, type: 3}
   liParent: {fileID: 673593936}
   b1: {fileID: 941727226}
+--- !u!114 &664661380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664661375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9055fab267eb474c9034eee78785486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &673593935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,7 +2198,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
