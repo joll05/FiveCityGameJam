@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class SantaController : MonoBehaviour
@@ -98,19 +99,20 @@ public class SantaController : MonoBehaviour
                 lvl_2.SetActive(false);
                 lvl_3.SetActive(true);
             }
-            else if (Camera.main.GetComponent<CameraScript>().currentLvl == 4)
+            else if (Camera.main.GetComponent<CameraScript>().currentLvl >= 4)
             {
                 ScoreContainer.instance.score = ScoreManager.Score;
-                SceneSwitcher.instance.SwitchScene(3);
+              
+                SceneManager.LoadScene(3);
             }
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Projectile"))
+        if (collision.gameObject.CompareTag("Projectile") && state==SantaState.Moving)
         {
-            ScoreManager.ChangeScore(30);
+            //ScoreManager.ChangeScore(30);
             SpeedMultiplier += (2 - SpeedMultiplier) * 0.5f;
         }
     }

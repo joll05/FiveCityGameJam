@@ -17,7 +17,7 @@ public class Kill : MonoBehaviour
     {
         //print("hit something");
 
-        if (collision.transform.CompareTag("interactable")|| collision.transform.CompareTag("Santa"))
+        if (collision.transform.CompareTag("interactable"))
         {
             collision.transform.GetComponent<Transformer>().OnHit();
 

@@ -33,7 +33,7 @@ public class Throw : MonoBehaviour
             return;
 
         forceSlider.value = timer / maxtime;
-        print(timer / maxtime);
+        //print(timer / maxtime);
         if (Input.GetMouseButtonDown(0))
         {
             startTime = true;
@@ -49,12 +49,12 @@ public class Throw : MonoBehaviour
             { 
                 Vector3 input = new Vector3(Input.mousePosition.x, Input.mousePosition.y);
                 Ray r = CameraController.current.ScreenPointToRay(input);
-                Debug.DrawRay(r.origin, r.direction * 100, Color.blue, 12);
+                //Debug.DrawRay(r.origin, r.direction * 100, Color.blue, 12);
                 //print(CameraController.current);
                 GameObject instance = Instantiate(gos[Random.Range(0, gos.Count)]) as GameObject;
                 instance.transform.position = CameraController.current.transform.position;
                 instance.GetComponent<Rigidbody>().AddForce(r.direction * (baseForce + multiplier * timer), ForceMode.Impulse);
-                print(timer);
+               // print(timer);
                 startTime = false;
                 timer = 0;
                 forceSlider.gameObject.SetActive(false);

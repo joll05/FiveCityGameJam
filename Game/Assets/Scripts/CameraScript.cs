@@ -10,6 +10,7 @@ public class CameraScript : MonoBehaviour
     public int currentLvl;
     public int back;
     public bool inOffice = true;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class CameraScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         startPos = this.transform.position;
         startRot = this.transform.rotation;
+        
     }
 
     // Update is called once per frame
@@ -27,9 +29,10 @@ public class CameraScript : MonoBehaviour
         {
             transform.RotateAround(transform.position, new Vector3(0, 1, 0), Input.GetAxis("Mouse X") * sensetivity);
             transform.RotateAround(transform.position, this.transform.right, Input.GetAxis("Mouse Y") * sensetivity * -1);
+            
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) || currentLvl != back)
+        if (Input.GetMouseButtonDown(1) || currentLvl != back)
         {
             if(currentLvl < 4) 
             { 
